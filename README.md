@@ -35,9 +35,9 @@ A minimum configuration to demonstrate the features of Kubernetes that I used is
 
 Software versions:
 
-* O/S version: `Raspbian Buster Lite / Kernel 4:19`
-* Kubernetes version: `v1.15.0`
-* Docker version: `18.09.0`
+* O/S version: `Raspbian Buster Lite / Kernel 4.19.75-v7l+`
+* Kubernetes version: `1.16.3`
+* Docker version: `19.03.5`
 
 Network:
 
@@ -133,7 +133,7 @@ Select the machine you are going to use as the master node
 
 * Install (flannel)
 ```
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=172.16.1.210
 ```
 
 * Once complete, note the line starting 
